@@ -1,0 +1,40 @@
+---
+title: "BOJ - 1001"
+description: "A-B"
+date: "2023-05-02"
+tags: ['BOJ']
+---
+## Problem
+> 두 정수 A와 B를 입력받은 다음, A-B를 출력하는 프로그램을 작성하시오.
+
+## Input
+> 첫째 줄에 A와 B가 주어진다. (0 < A, B < 10)
+
+## Output
+> 첫째 줄에 A-B를 출력한다.
+
+---
+```rust
+use std::io;
+
+fn main() {
+    let mut input = String::new();
+    io::stdin().read_line(&mut input).unwrap();
+
+    let tokens: Vec<i32> = input
+        .as_mut_str()
+        .split_ascii_whitespace()
+        .map(|input| input.parse().unwrap())
+        .collect();
+
+    println!("{}", tokens[0] - tokens[1]);
+}
+```
+---
+[1000](./boj-1000)번과 다를 게 없다.
+
+
+## Result
+| Mem                     | Time         | Language  | Length |
+| ----------------------- | ------------ | --------- | ------ |
+| 13152 KB                | 4 ms         | Rust 2018 | 272 B  |
