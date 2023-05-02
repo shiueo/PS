@@ -7,10 +7,7 @@ fn main() {
 
     let first_num: i32 = input_1.trim().parse().unwrap();
 
-    let mut i:i32 = 1;
-
-    while i < 10 {
-        println!("{} * {} = {}", first_num, i, first_num*i);
-        i = i + 1;
+    for i in 1..10 {
+        println!("{} * {} = {}", first_num, i, first_num * i);
     }
 }
