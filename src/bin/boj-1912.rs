@@ -11,7 +11,7 @@ fn main() {
     let mut max_v:i32 = -1000;
 
     for i in 1..arr.len() {
-        let v = cmp::max(arr[i], arr[i]+v_arr[i-1]);
+        let v = arr[i].max(arr[i] + v_arr[i-1]);
         v_arr.push(v);
         max_v = cmp::max(max_v, v)
     }
