@@ -18,7 +18,7 @@ const Home: NextPage<HomeProps> = ({ posts }) => {
         description={
           <>
             <p>
-              Python / Rust
+              A space for me to solve and organize PS problems.
             </p>
           </>
         }
@@ -28,7 +28,7 @@ const Home: NextPage<HomeProps> = ({ posts }) => {
           <Link
             passHref
             href="/posts"
-            className="group inline-flex items-center gap-2 text-pink-600"
+            className="inline-flex items-center gap-2 text-pink-600 group"
           >
             View more posts{" "}
             <ArrowRight

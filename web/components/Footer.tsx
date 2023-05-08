@@ -15,7 +15,7 @@ const SOCIAL_ICONS: { [key: string]: React.ReactNode } = {
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="mt-auto py-8">
+    <footer className="py-8 mt-auto">
       {siteConfig.social ? (
         <ul className="flex justify-center space-x-4">
           {Object.entries(siteConfig.social).map(([key, href]) => {
@@ -37,7 +37,7 @@ export const Footer: React.FC = () => {
           })}
         </ul>
       ) : null}
-      <div className="mt-8 flex justify-center">
+      <div className="flex justify-center mt-8">
         <ThemeSelect />
       </div>
     </footer>
