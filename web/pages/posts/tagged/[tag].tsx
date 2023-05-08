@@ -48,7 +48,6 @@ export const getStaticProps: GetStaticProps = async (context) => {
     props: {
       tag,
       posts: mdxFiles.filter((file) => {
-        console.log(tag);
         return file.tags?.includes(tag);
       }),
     },
