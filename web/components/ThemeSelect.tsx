@@ -46,7 +46,7 @@ export const ThemeSelect = () => {
       </span>
       <span
         aria-hidden={true}
-        className="absolute top-1/2 -translate-y-1/2 right-2 pointer-events-none"
+        className="absolute -translate-y-1/2 pointer-events-none top-1/2 right-2"
       >
         <Code width=".9em" className="rotate-90 opacity-50" />
       </span>
