@@ -17,9 +17,7 @@ const Home: NextPage<HomeProps> = ({ posts }) => {
         title="shiüo PS Blog"
         description={
           <>
-            <p>
-              A space for me to solve and organize PS problems.
-            </p>
+            <p>A space for me to solve and organize PS problems.</p>
           </>
         }
       >

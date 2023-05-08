@@ -3,8 +3,7 @@ const siteConfig: SiteConfig = {
   avatar: "/avatar.png",
   siteUrl: "https://shiueo-ps.vercel.app",
   siteName: "shiüo PS",
-  siteDescription:
-    "shiüo's PS Blog",
+  siteDescription: "shiüo's PS Blog",
   siteThumbnail: "/og-image.png",
   nav: [
     { label: "Posts", href: "/posts" },
