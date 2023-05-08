@@ -1,0 +1,49 @@
+---
+title: "CODEFORCES - 1829A"
+description: "Love Story"
+date: "2023-05-08"
+tags: ['CODEFORCES', 'Python']
+---
+## Problem
+Timur loves codeforces. That's why he has a string s having length 10 made containing only lowercase Latin letters. Timur wants to know how many indices string s
+
+differs from the string "codeforces".
+
+For example string s=
+"coolforsez" differs from "codeforces" in 4 indices, shown in bold.
+
+Help Timur by finding the number of indices where string s differs from "codeforces".
+
+Note that you can't reorder the characters in the string s.
+
+
+## Input
+The first line contains a single integer t (1≤t≤1000) — the number of test cases.
+
+Each test case is one line and contains the string s, consisting of exactly 10 lowercase Latin characters.
+
+## Output
+For each test case, output a single integer — the number of indices where string s differs.
+
+---
+```python
+import sys
+
+n = int(sys.stdin.readline())
+CODEFORCES = 'codeforces'
+for i in range(n):
+    c = 0
+    inn = sys.stdin.readline().strip()
+    for k in range(len(inn)):
+        if inn[k] != CODEFORCES[k]:
+            c += 1
+    print(c)
+```
+---
+
+`"codeforces"`와 차이나는 문자의 개수를 구하는 문제이다. 
+
+## Result
+| Mem      | Time | Language  |
+|----------|------|-----------|
+| 2300 KB | 61 ms | PyPy 3-64 |
