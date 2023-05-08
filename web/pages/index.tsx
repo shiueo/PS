@@ -1,13 +1,13 @@
-import type { GetStaticProps, NextPage } from "next";
-import Link from "next/link";
-import { getAllMdx } from "@/lib/mdx";
-import { MDXFrontMatter } from "@/lib/types";
-import { Page } from "@/components/Page";
-import { PostList } from "@/components/PostList";
-import { ArrowRight } from "react-feather";
+import type { GetStaticProps, NextPage } from 'next'
+import Link from 'next/link'
+import { getAllMdx } from '@/lib/mdx'
+import { MDXFrontMatter } from '@/lib/types'
+import { Page } from '@/components/Page'
+import { PostList } from '@/components/PostList'
+import { ArrowRight } from 'react-feather'
 
 interface HomeProps {
-  posts: Array<MDXFrontMatter>;
+  posts: Array<MDXFrontMatter>
 }
 
 const Home: NextPage<HomeProps> = ({ posts }) => {
@@ -28,25 +28,25 @@ const Home: NextPage<HomeProps> = ({ posts }) => {
             href="/posts"
             className="inline-flex items-center gap-2 text-pink-600 group"
           >
-            View more posts{" "}
+            View more posts{' '}
             <ArrowRight
               className="group-hover:translate-x-0.5 transition-transform"
-              width={".9em"}
+              width={'.9em'}
             />
           </Link>
         </div>
       </Page>
     </>
-  );
-};
+  )
+}
 
 export const getStaticProps: GetStaticProps = async () => {
-  const mdxFiles = getAllMdx().map((post) => post["frontMatter"]);
+  const mdxFiles = getAllMdx().map((post) => post['frontMatter'])
   return {
     props: {
       posts: mdxFiles.slice(0, 5),
     },
-  };
-};
+  }
+}
 
-export default Home;
+export default Home

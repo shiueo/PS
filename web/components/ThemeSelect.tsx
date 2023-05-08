@@ -1,34 +1,34 @@
-import { useState, useEffect } from "react";
-import { useTheme } from "next-themes";
-import { Command, Sun, Moon, Code } from "react-feather";
-import { cx } from "@/lib/utils";
+import { useState, useEffect } from 'react'
+import { useTheme } from 'next-themes'
+import { Command, Sun, Moon, Code } from 'react-feather'
+import { cx } from '@/lib/utils'
 
 const THEME_MAP: { [key: string]: { label: string; icon: React.ReactNode } } = {
   system: {
-    label: "System",
+    label: 'System',
     icon: <Command width=".9em" />,
   },
   light: {
-    label: "Light",
+    label: 'Light',
     icon: <Sun width=".9em" />,
   },
   dark: {
-    label: "Dark",
+    label: 'Dark',
     icon: <Moon width=".9em" />,
   },
-};
+}
 
 export const ThemeSelect = () => {
-  const [mounted, setMounted] = useState(false);
-  const { theme: activeTheme, themes, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false)
+  const { theme: activeTheme, themes, setTheme } = useTheme()
 
   // When mounted on client, now we can show the UI
-  useEffect(() => setMounted(true), []);
+  useEffect(() => setMounted(true), [])
 
-  if (!mounted) return null;
+  if (!mounted) return null
 
   const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) =>
-    setTheme(e.target.value);
+    setTheme(e.target.value)
 
   return (
     <div className="relative inline-block">
@@ -38,8 +38,8 @@ export const ThemeSelect = () => {
       <span
         aria-hidden={true}
         className={cx(
-          "absolute top-1/2 -translate-y-1/2 left-2 pointer-events-none",
-          "opacity-50"
+          'absolute top-1/2 -translate-y-1/2 left-2 pointer-events-none',
+          'opacity-50',
         )}
       >
         {THEME_MAP[activeTheme!].icon}
@@ -53,9 +53,9 @@ export const ThemeSelect = () => {
       <select
         id="theme-menu"
         className={cx(
-          "appearance-none rounded-md sm:w-full pl-8 pr-12 border",
-          "bg-gray-100 border-gray-200",
-          "dark:bg-gray-800 dark:border-gray-700"
+          'appearance-none rounded-md sm:w-full pl-8 pr-12 border',
+          'bg-gray-100 border-gray-200',
+          'dark:bg-gray-800 dark:border-gray-700',
         )}
         onChange={handleChange}
         value={activeTheme}
@@ -65,9 +65,9 @@ export const ThemeSelect = () => {
             <option key={theme} value={theme}>
               {THEME_MAP[theme].label}
             </option>
-          );
+          )
         })}
       </select>
     </div>
-  );
-};
+  )
+}

@@ -1,16 +1,16 @@
-import Head from "next/head";
-import { onlyText } from "react-children-utilities";
-import { formatDate } from "@/lib/formatDate";
-import siteConfig from "@/data/siteConfig";
-import { Prose } from "@/components/Prose";
-import { cx } from "@/lib/utils";
+import Head from 'next/head'
+import { onlyText } from 'react-children-utilities'
+import { formatDate } from '@/lib/formatDate'
+import siteConfig from '@/data/siteConfig'
+import { Prose } from '@/components/Prose'
+import { cx } from '@/lib/utils'
 
 interface PageProps {
-  date?: string;
-  title: string | React.ReactNode;
-  description?: string | React.ReactNode;
-  thumbnail?: string;
-  children?: React.ReactNode;
+  date?: string
+  title: string | React.ReactNode
+  description?: string | React.ReactNode
+  thumbnail?: string
+  children?: React.ReactNode
 }
 
 export const Page: React.FC<PageProps> = ({
@@ -20,13 +20,13 @@ export const Page: React.FC<PageProps> = ({
   thumbnail,
   children,
 }) => {
-  const metaTitle = onlyText(title);
+  const metaTitle = onlyText(title)
   const metaDescription = description
     ? onlyText(description)
-    : siteConfig.siteDescription;
-  const metaThumbnail = thumbnail ? thumbnail : siteConfig.siteThumbnail;
+    : siteConfig.siteDescription
+  const metaThumbnail = thumbnail ? thumbnail : siteConfig.siteThumbnail
   // fixed https://github.com/vercel/next.js/discussions/38256
-  const customTitle = `${metaTitle} - ${siteConfig.siteName}`;
+  const customTitle = `${metaTitle} - ${siteConfig.siteName}`
   return (
     <>
       <Head>
@@ -42,14 +42,14 @@ export const Page: React.FC<PageProps> = ({
       </Head>
       <header
         className={cx(
-          "mb-8 pb-8 border-b",
-          "border-gray-200",
-          "dark:border-gray-700"
+          'mb-8 pb-8 border-b',
+          'border-gray-200',
+          'dark:border-gray-700',
         )}
       >
         {date ? (
           <time
-            className={cx("block mb-2", "text-gray-500", "dark:text-gray-400")}
+            className={cx('block mb-2', 'text-gray-500', 'dark:text-gray-400')}
           >
             {formatDate(date)}
           </time>
@@ -58,7 +58,7 @@ export const Page: React.FC<PageProps> = ({
         {description ? (
           <div className="mt-4">
             <Prose>
-              {typeof description === "string" ? (
+              {typeof description === 'string' ? (
                 <p>{description}</p>
               ) : (
                 description
@@ -69,5 +69,5 @@ export const Page: React.FC<PageProps> = ({
       </header>
       {children}
     </>
-  );
-};
+  )
+}

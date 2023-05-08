@@ -1,21 +1,21 @@
-import Link from "next/link";
-import { formatDate } from "@/lib/formatDate";
-import type { MDXFrontMatter } from "@/lib/types";
-import { Prose } from "@/components/Prose";
-import { cx, slugify } from "@/lib/utils";
-import { Tag } from "./Tag";
+import Link from 'next/link'
+import { formatDate } from '@/lib/formatDate'
+import type { MDXFrontMatter } from '@/lib/types'
+import { Prose } from '@/components/Prose'
+import { cx, slugify } from '@/lib/utils'
+import { Tag } from './Tag'
 
 interface PostListProps {
-  posts: Array<MDXFrontMatter>;
+  posts: Array<MDXFrontMatter>
 }
 
 export const PostList: React.FC<PostListProps> = ({ posts }) => {
   return (
     <ul
       className={cx(
-        "divide-y -my-8",
-        "divide-gray-200",
-        "dark:divide-gray-700"
+        'divide-y -my-8',
+        'divide-gray-200',
+        'dark:divide-gray-700',
       )}
     >
       {posts.map((post, index) => {
@@ -24,9 +24,9 @@ export const PostList: React.FC<PostListProps> = ({ posts }) => {
             <article>
               <time
                 className={cx(
-                  "block mb-2",
-                  "text-gray-500",
-                  "dark:text-gray-400"
+                  'block mb-2',
+                  'text-gray-500',
+                  'dark:text-gray-400',
                 )}
               >
                 {formatDate(post.date)}
@@ -48,14 +48,14 @@ export const PostList: React.FC<PostListProps> = ({ posts }) => {
                       <li key={index}>
                         <Tag href={`/posts/tagged/${slugify(tag)}`}>{tag}</Tag>
                       </li>
-                    );
+                    )
                   })}
                 </ul>
               ) : null}
             </article>
           </li>
-        );
+        )
       })}
     </ul>
-  );
-};
+  )
+}

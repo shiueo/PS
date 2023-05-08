@@ -1,6 +1,6 @@
-import type { NextPage } from "next";
-import { Page } from "@/components/Page";
-import { Prose } from "@/components/Prose";
+import type { NextPage } from 'next'
+import { Page } from '@/components/Page'
+import { Prose } from '@/components/Prose'
 
 const About: NextPage = () => {
   return (
@@ -37,7 +37,7 @@ const About: NextPage = () => {
         </Prose>
       </Page>
     </>
-  );
-};
+  )
+}
 
-export default About;
+export default About
