@@ -15,6 +15,7 @@ if N in S:
     print(0)
 
 else:
+    S.append(0)
     S.sort()
 
     i = 0
