@@ -31,17 +31,14 @@ dp = [0 for _ in range(N)]
 if N == 1:
     print(L[0])
 elif N == 2:
-    print(L[0]+L[1])
+    print(L[0] + L[1])
 elif N == 3:
-    print(max(L[0]+L[1], L[1]+L[2], L[0]+L[2]))
+    print(max(L[0] + L[1], L[1] + L[2], L[0] + L[2]))
 else:
     dp[0] = L[0]
-    dp[1] = L[0]+L[1]
-    dp[2] = max(L[0]+L[1], L[1]+L[2], L[0]+L[2])
+    dp[1] = L[0] + L[1]
+    dp[2] = max(L[0] + L[1], L[1] + L[2], L[0] + L[2])
     for i in range(3, N):
-        dp[i] = max(dp[i-3] + L[i] + L[i-1], dp[i-2] + L[i])
-        dp[i] = max(dp[i-1], dp[i])
+        dp[i] = max(dp[i - 3] + L[i] + L[i - 1], dp[i - 2] + L[i], dp[i - 1])
 
     print(dp[-1])
-
-

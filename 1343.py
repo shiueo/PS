@@ -3,7 +3,7 @@ import sys
 POLY = sys.stdin.readline().strip()
 
 POLY_SPLITTED = []
-for i in POLY.split('.'):
+for i in POLY.split("."):
     if i:
         POLY_SPLITTED.append(i)
 
@@ -13,15 +13,15 @@ for i in POLY_SPLITTED:
         RES += "AAAA" * (len(i) // 4)
         RES += "BB" * (len(i) % 4 // 2)
     else:
-        print('-1')
+        print("-1")
         sys.exit()
 
 K = []
 j = 0
 for i in range(len(POLY)):
-    if POLY[i] == '.':
-        K.append('.')
+    if POLY[i] == ".":
+        K.append(".")
     else:
         K.append(RES[j])
         j += 1
-print(''.join(K))
+print("".join(K))

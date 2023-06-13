@@ -9,4 +9,4 @@ for i in range(n):
         if u >= k and k % 2 == 1:
             print("YES")
         else:
-            print('NO')
+            print("NO")

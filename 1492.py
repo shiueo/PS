@@ -14,14 +14,14 @@ for i in range(52):
 
 dp[0] = N
 for i in range(1, K + 1):
-    tmp = pow(N+1, i+1, MOD)-1
+    tmp = pow(N + 1, i + 1, MOD) - 1
     for j in range(i):
-        tmp -= modulo[i+1][j]*dp[j] % MOD
+        tmp -= modulo[i + 1][j] * dp[j] % MOD
         if tmp < 0:
-            tmp = (tmp+MOD) % MOD
+            tmp = (tmp + MOD) % MOD
         else:
             tmp %= MOD
-    tmp = tmp*pow(modulo[i+1][i], MOD-2, MOD) % MOD
+    tmp = tmp * pow(modulo[i + 1][i], MOD - 2, MOD) % MOD
     dp[i] = tmp
 
 print(dp[K])

@@ -55,12 +55,14 @@ x_a, y_a, x_b, y_b, x_c, y_c = map(int, sys.stdin.readline().split())
 if ((x_a - x_b) * (y_a - y_c)) == (y_a - y_b) * (x_a - x_c):
     print("-1.0")
 else:
+
     def get_length(a, b, c, d):
         return ((a - c) ** 2 + (b - d) ** 2) ** 0.5
 
-
-    length = [get_length(x_a, y_a, x_b, y_b) + get_length(x_a, y_a, x_c, y_c),
-              get_length(x_a, y_a, x_b, y_b) + get_length(x_b, y_b, x_c, y_c),
-              get_length(x_a, y_a, x_c, y_c) + get_length(x_b, y_b, x_c, y_c)]
+    length = [
+        get_length(x_a, y_a, x_b, y_b) + get_length(x_a, y_a, x_c, y_c),
+        get_length(x_a, y_a, x_b, y_b) + get_length(x_b, y_b, x_c, y_c),
+        get_length(x_a, y_a, x_c, y_c) + get_length(x_b, y_b, x_c, y_c),
+    ]
 
     print(2 * (max(length) - min(length)))

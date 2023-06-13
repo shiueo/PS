@@ -1,4 +1,5 @@
 import sys
+
 sys.setrecursionlimit(1000000)
 
 N = int(sys.stdin.readline())
@@ -13,7 +14,6 @@ for i in range(N):
         X, Y = map(int, sys.stdin.readline().split())
         BAECHOO_BAT[Y][X] = 1
 
-
     def dfs(x, y):
         for k in range(4):
             next_x = x + move_x[k]
@@ -24,11 +24,10 @@ for i in range(N):
                     BAECHOO_BAT[next_y][next_x] = 0
                     dfs(next_x, next_y)
 
-
     count = 0
     for j in range(M):
         for k in range(N):
             if BAECHOO_BAT[k][j] == 1:
-                count+=1
+                count += 1
                 dfs(j, k)
     print(count)

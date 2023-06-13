@@ -1,7 +1,7 @@
 import sys
 
 n = int(sys.stdin.readline())
-CODEFORCES = 'codeforces'
+CODEFORCES = "codeforces"
 for i in range(n):
     c = 0
     inn = sys.stdin.readline().strip()

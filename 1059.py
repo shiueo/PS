@@ -23,4 +23,4 @@ else:
         if S[i] > N:
             break
 
-    print((N-(S[i-1]+1))*(S[i]-N) + (S[i]-N-1))
+    print((N - (S[i - 1] + 1)) * (S[i] - N) + (S[i] - N - 1))

@@ -17,4 +17,4 @@ H += D % 24
 if H >= 24:
     H -= 24
 
-print(H,M,S)
+print(H, M, S)

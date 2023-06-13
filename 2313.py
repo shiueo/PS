@@ -23,10 +23,10 @@ for i in L:
             m = i[j]
             m_end, m_start = end, start
 
-        elif i[j] == m and m_end - m_start > end-start:
+        elif i[j] == m and m_end - m_start > end - start:
             m = i[j]
             m_end, m_start = end, start
-    res += f'{m_start + 1} {m_end + 1}\n'
+    res += f"{m_start + 1} {m_end + 1}\n"
     s += m
 
 print(s)
