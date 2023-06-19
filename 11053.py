@@ -11,4 +11,14 @@ for i in range(1, N):
         if L[i] > L[j]:
             dp[i] = max(dp[i], dp[j] + 1)
 
-print(max(dp))
+M = max(dp)
+print(M)
+
+res = []
+for i in range(N - 1, -1, -1):
+    if dp[i] == M:
+        res.append(str(L[i]))
+        M -= 1
+
+res.reverse()
+print(' '.join(res))
