@@ -2,10 +2,10 @@ import sys
 
 house = int(sys.stdin.readline())
 
-dp = [[0, 0, 0] for _ in range(house+1)]
+dp = [[0, 0, 0] for _ in range(house + 1)]
 
 
-for i in range(1, house+1):
+for i in range(1, house + 1):
     a, b, c = map(int, sys.stdin.readline().split())
 
     dp[i][0] = min(dp[i - 1][1], dp[i - 1][2]) + a

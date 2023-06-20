@@ -10,6 +10,6 @@ for i in range(N):
         D[A] = D[A] + int(B)
 
 if 5 in D.values():
-    print('YES')
+    print("YES")
 else:
-    print('NO')
+    print("NO")

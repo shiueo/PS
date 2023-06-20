@@ -12,5 +12,5 @@ N = list(map(int, sys.stdin.readline().split()))
 N.sort()
 dp = [0 for _ in range(K + 1)]
 for i in range(1, K + 1):
-    dp[i] = dp[i - 1] + N[i-1]
+    dp[i] = dp[i - 1] + N[i - 1]
 print(sum(dp))

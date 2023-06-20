@@ -10,6 +10,6 @@ if N >= 2:
     print(fibo[-1])
 else:
     if N == 1:
-        print('1')
+        print("1")
     else:
-        print('0')
+        print("0")

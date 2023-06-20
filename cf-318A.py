@@ -6,7 +6,7 @@ import sys
 
 a, b = map(int, sys.stdin.readline().split())
 
-if b > (a+1) // 2:
-    print(2*(b - ((1+a)//2)))
+if b > (a + 1) // 2:
+    print(2 * (b - ((1 + a) // 2)))
 else:
-    print(2*b-1)
+    print(2 * b - 1)

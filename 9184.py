@@ -11,7 +11,12 @@ def w(a, b, c):
     if a < b < c:
         dp[a][b][c] = w(a, b, c - 1) + w(a, b - 1, c - 1) - w(a, b - 1, c)
         return dp[a][b][c]
-    dp[a][b][c] = w(a - 1, b, c) + w(a - 1, b - 1, c) + w(a - 1, b, c - 1) - w(a - 1, b - 1, c - 1)
+    dp[a][b][c] = (
+        w(a - 1, b, c)
+        + w(a - 1, b - 1, c)
+        + w(a - 1, b, c - 1)
+        - w(a - 1, b - 1, c - 1)
+    )
     return dp[a][b][c]
 
 
@@ -20,4 +25,4 @@ while 1:
     x, y, z = map(int, sys.stdin.readline().split())
     if x == -1 and y == -1 and z == -1:
         break
-    print(f'w({x}, {y}, {z}) = {w(x, y, z)}')
+    print(f"w({x}, {y}, {z}) = {w(x, y, z)}")

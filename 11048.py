@@ -2,7 +2,9 @@ import sys
 
 N, M = map(int, sys.stdin.readline().split())
 
-L = [[0] * (M + 1)] + [[0] + list(map(int, sys.stdin.readline().strip().split())) for _ in range(N)]
+L = [[0] * (M + 1)] + [
+    [0] + list(map(int, sys.stdin.readline().strip().split())) for _ in range(N)
+]
 
 dp = [[0 for _ in range(M + 1)] for _ in range(N + 1)]
 

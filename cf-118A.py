@@ -6,4 +6,4 @@ vowels = ["a", "e", "i", "o", "u", "y"]
 
 
 x = [_ for _ in x if _ not in vowels]
-print('.'+'.'.join(x))
+print("." + ".".join(x))

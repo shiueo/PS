@@ -8,4 +8,4 @@ for i in range(N):
     else:
         res.append("I love")
 
-print(' that '.join(res)+" it")
+print(" that ".join(res) + " it")

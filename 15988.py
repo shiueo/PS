@@ -20,4 +20,4 @@ else:
     dp[3] = 7
 
 for i in IN:
-    print(dp[i-1])
+    print(dp[i - 1])

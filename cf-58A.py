@@ -2,7 +2,7 @@ import sys
 
 x = sys.stdin.readline().strip()
 
-D = ['h', 'e', 'l', 'l', 'o']
+D = ["h", "e", "l", "l", "o"]
 D.reverse()
 
 for i in x:
@@ -14,4 +14,4 @@ for i in x:
 if len(D) == 0:
     print("YES")
 else:
-    print('NO')
+    print("NO")

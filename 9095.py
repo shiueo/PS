@@ -23,5 +23,5 @@ for i in range(N):
 
         print(dp[-1])
     else:
-        dp = [1,2,4]
+        dp = [1, 2, 4]
         print(dp[J - 1])

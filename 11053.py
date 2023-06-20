@@ -21,4 +21,4 @@ for i in range(N - 1, -1, -1):
         M -= 1
 
 res.reverse()
-print(' '.join(res))
+print(" ".join(res))
